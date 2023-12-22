@@ -2,7 +2,14 @@
   <div class="card card-bordered w-full max-w-md bg-neutral text-neutral-content shadow-md">
     <div class="card-body items-center gap-8 text-center">
       <h1 class="card-title">Bienvenue {fullname}</h1>
-      <img src={user.avatar} sizes="(min-width: 548px) 448px, calc(100vw - 96px)" alt="Avatar" width={3888} height={5184} />
+      <img
+        src={`/_vercel/image?url=${encodeURIComponent(user.avatar)}`}
+        sizes="(min-width: 548px) 448px, calc(100vw - 96px)"
+        alt="Avatar"
+        width={3888}
+        height={5184}
+        loading="lazy"
+      />
       <form method="post" action="?/signout" use:enhance>
         <button type="submit" class="btn btn-primary">Je me déconnecte</button>
       </form>
