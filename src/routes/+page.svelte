@@ -3,7 +3,7 @@
     <div class="card-body items-center gap-8 text-center">
       <h1 class="card-title">Bienvenue {fullname}</h1>
       <img
-        src={`/_vercel/image?url=${encodeURIComponent(user.avatar)}`}
+        src={`/_vercel/image?url=${encodeURIComponent(user.avatar)}&w=3888&q=100`}
         sizes="(min-width: 548px) 448px, calc(100vw - 96px)"
         alt="Avatar"
         width={3888}
