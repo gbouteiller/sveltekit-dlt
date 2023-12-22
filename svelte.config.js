@@ -13,12 +13,13 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
 			images: {
-				domains: ['utfs.io'],
+				domains: [],
 				sizes: [640, 828, 1200, 1920, 3840],
 				formats: ['image/avif', 'image/webp'],
 				remotePatterns: [
 					{
 						protocol: 'https',
+						port: '',
 						hostname: 'utfs.io',
 						pathname: '/f/**'
 					},
