@@ -20,7 +20,7 @@ const config = {
 					{
 						protocol: 'https',
 						hostname: 'utfs.io',
-						pathname: '/f/*'
+						pathname: '/f/**'
 					},
 				],
 			}
