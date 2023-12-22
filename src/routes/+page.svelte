@@ -2,14 +2,7 @@
   <div class="card card-bordered w-full max-w-md bg-neutral text-neutral-content shadow-md">
     <div class="card-body items-center gap-8 text-center">
       <h1 class="card-title">Bienvenue {fullname}</h1>
-      <img
-        src={`/_vercel/image?url=${encodeURIComponent(user.avatar)}&w=3888&q=100`}
-        sizes="(min-width: 548px) 448px, calc(100vw - 96px)"
-        alt="Avatar"
-        width={3888}
-        height={5184}
-        loading="lazy"
-      />
+      <img {src} sizes="(min-width: 548px) 448px, calc(100vw - 96px)" alt="Avatar" width={3888} height={5184} loading="lazy" />
       <form method="post" action="?/signout" use:enhance>
         <button type="submit" class="btn btn-primary">Je me déconnecte</button>
       </form>
@@ -25,6 +18,7 @@
 
   $: ({user} = data);
   $: fullname = `${user.forename} ${user.surname.toUpperCase()}`;
+  $: src = `/_vercel/image?url=${encodeURIComponent(user.avatar)}&w=3888&q=100`;
 
   const form = superForm(data.form);
   const {enhance} = form;
