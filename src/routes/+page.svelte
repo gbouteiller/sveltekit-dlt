@@ -18,7 +18,7 @@
 
   $: ({user} = data);
   $: fullname = `${user.forename} ${user.surname.toUpperCase()}`;
-  $: src = `/_vercel/image?url=${encodeURIComponent(user.avatar)}&w=3888&q=100`;
+  $: src = `/_vercel/image?url=${encodeURIComponent(user.avatar)}&w=3840&q=100`;
 
   const form = superForm(data.form);
   const {enhance} = form;
